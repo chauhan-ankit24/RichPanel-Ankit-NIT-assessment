@@ -1,0 +1,81 @@
+.Payment_Screen_wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1f4c90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Payment_Screen_wrapper .Payment_Screen_Container {
+    height: 30%;
+    background-color: #fefffe;
+    width: 55%;
+    border-radius: 10px;
+    display: flex;
+    padding-left: 2rem;
+    overflow: hidden;
+}
+
+.Payment_Screen_wrapper .Payment_Screen_Container .CardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 60%;
+}
+
+.Payment_Screen_wrapper .Payment_Screen_Container .CardInfo .Card_details {
+    display: flex;
+    border: 1px solid #8f8f94;
+    border-radius: 5px;
+    width: 80%;
+    height: 2.5rem;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.Payment_Screen_wrapper .Payment_Screen_Container .CardInfo .Card_details input {
+    border: none;
+    outline: none;
+}
+
+.Payment_Screen_wrapper .Payment_Screen_Container .CardInfo .Card_details input:nth-child(2) {
+    width: 60%;
+}
+
+.Payment_Screen_wrapper .Payment_Screen_Container .CardInfo .Card_details input:nth-child(3) {
+    width: 20%;
+}
+
+.Payment_Screen_wrapper .Payment_Screen_Container .CardInfo .Card_details input:nth-child(4) {
+    width: 20%;
+}
+
+.Payment_Screen_wrapper .Payment_Screen_Container .CardInfo input[type=submit] {
+    background-color: #015294;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: 40%;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.Payment_Screen_wrapper .Payment_Screen_Container .OrderInfo {
+    background-color: #f5f5f7;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    padding-left: 1rem;
+}
+
+.Payment_Screen_wrapper .Payment_Screen_Container .OrderInfo div {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}

@@ -1,0 +1,82 @@
+.SignUp-wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e4d91;
+}
+
+.SignUp-wrapper .signup-container {
+    width: 20rem;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.SignUp-wrapper .signup-container h2 {
+    margin-left: 3.5rem;
+}
+
+.SignUp-wrapper .signup-container form {
+    max-width: 300px;
+}
+
+.SignUp-wrapper .signup-container form .div1 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.SignUp-wrapper .signup-container form .div2 {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.SignUp-wrapper .signup-container form input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ccc;
+    border-radius: 0.1875rem;
+    box-sizing: border-box;
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.275rem;
+    width: 100%;
+}
+
+.SignUp-wrapper .signup-container form input[type=checkbox] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+    display: inline-block;
+    width: auto;
+}
+
+.SignUp-wrapper .signup-container form input[type=password] {
+    margin-bottom: 0.5rem;
+}
+
+.SignUp-wrapper .signup-container form input[type=submit] {
+    background-color: #015294;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.SignUp-wrapper .signup-container form label {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.SignUp-wrapper .signup-container p span {
+    color: #325c9a;
+}
+
+.SignUp-wrapper .signup-container p span:hover {
+    cursor: pointer;
+}
