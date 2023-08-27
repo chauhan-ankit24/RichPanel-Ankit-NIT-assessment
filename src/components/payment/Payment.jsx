@@ -36,7 +36,7 @@ const   Payment = ()=> {
                 };
     
                 // Make the axios PUT request to update the user's plan
-                const { data } = await axios.put("http://localhost:3000/UpdateUser", updatedPlanData);
+                const { data } = await axios.put("https://richpanel-ankit-nit-assessment-backend.onrender.com/UpdateUser", updatedPlanData);
     
                 // After successful update, navigate to the selected_plan route
                

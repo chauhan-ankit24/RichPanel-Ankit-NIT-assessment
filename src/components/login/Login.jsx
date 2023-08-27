@@ -7,10 +7,11 @@ import { useGlobalContext } from "../../StateContext";
 
 const Login = () => {
     const navigate = useNavigate();
+    const { setuser } = useGlobalContext();
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [rememberMe, setRememberMe] = useState(false);
-    const { setuser } = useGlobalContext();
 
     useEffect(() => {
         const storedEmail = localStorage.getItem("username");
@@ -22,9 +23,9 @@ const Login = () => {
         }
     }, []);
 
-    const handleSignIn = async (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault()
-        const { data } = await axios.post('http://localhost:3000/signIn', { email, password })
+        const { data } = await axios.post('https://richpanel-ankit-nit-assessment-backend.onrender.com/signIn', { email, password })
         console.log(data);
         if (data.status == 400) {
             alert(data.msg)
@@ -42,8 +43,7 @@ const Login = () => {
                 localStorage.removeItem("username");
                 localStorage.removeItem("checkbox");
             }
-            navigate('/CurrentPlan')
-            // navigate('/Plan')
+            navigate('/Plan')
         }
     };
 
@@ -76,7 +76,7 @@ const Login = () => {
                             type="submit"
                             value="Login"
                             id="signUpButton"
-                            onClick={(e) => handleSignIn(e)}
+                            onClick={(e) => handleLogin(e)}
                         />
                     </form>
                     <p>

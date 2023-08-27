@@ -24,7 +24,7 @@ const SignUp = () => {
     const handleSignUp = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3000/signUp", {
+            const response = await axios.post("https://richpanel-ankit-nit-assessment-backend.onrender.com/signUp", {
                 name,
                 email,
                 password,

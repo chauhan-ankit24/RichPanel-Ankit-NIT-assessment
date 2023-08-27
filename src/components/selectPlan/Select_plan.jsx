@@ -7,8 +7,10 @@ import { useGlobalContext } from '../../StateContext';
  const Select_plan = () => {
     const {user,setuser} = useGlobalContext();
     const navigate = useNavigate();
-    const [showMonthly, setShowMonthly] = useState(false);
+
+    const [showMonthly, setShowMonthly] = useState(true);
     const [selectedColumnIndex, setSelectedColumnIndex] = useState(0);
+
     const devices = [
         ['Phone', 'Tablet'], 
         ['Phone', 'Tablet', 'Computer', 'TV'], 
@@ -35,6 +37,8 @@ import { useGlobalContext } from '../../StateContext';
         setShowMonthly(!showMonthly);
     };
     console.log(user);
+
+
     const handleHeaderClick = (index) => {
         setSelectedColumnIndex(index);
       
