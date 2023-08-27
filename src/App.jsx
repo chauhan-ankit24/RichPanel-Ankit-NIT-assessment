@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import Payment from './components/payment/Payment';
-import Select_plan from './components/SelectPlan/Select_plan';
+import Select_plan from './components/selectPlan/Select_plan';
 import Login from './components/login/Login';
 import SignUp from './components/signUp/SignUp';
 import Curent_plan from './components/currentPlan/Curent_plan';
