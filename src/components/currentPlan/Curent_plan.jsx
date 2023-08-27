@@ -1,10 +1,11 @@
 import './Current_plan.css'
 import { useGlobalContext } from "../../StateContext";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios'
 
 const Curent_plan = () => {
   const navigate = useNavigate();
-  const { user } = useGlobalContext();
+  const { user, setuser } = useGlobalContext();
 
   const devices = user.plan.devices;
   const formattedDevices = devices.join(" + ");
@@ -53,6 +54,37 @@ const Curent_plan = () => {
   const formattedStartDate = formatDate(subscriptionStartDate);
   const formattedRenewalDate = formatDate(renewalDate);
 
+  const handleCancel = async () => {
+    try {
+      const updatedUser = {
+        ...user,
+        plan: {
+          cycle: null,
+          name: null,
+          price: null,
+          devices: [],
+          state: "cancelled",
+          dateofsubscription: null,
+        },
+      };
+
+      const { data } = await axios.put(
+        "https://richpanel-ankit-nit-assessment-backend.onrender.com/UpdateUser",
+        updatedUser
+      );
+
+      setuser({
+        ...user,
+        plan: {
+          ...user?.plan,
+          state: "cancelled",
+        },
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className='CurrentMain'>
       <div className="CurretnContainer">
@@ -75,7 +107,7 @@ const Curent_plan = () => {
           </div >
           <div className="CurretnContainer_item_in2">
             {user.plan.state === "active" ?
-              <div className=''>
+              <div className='' onClick={handleCancel}>
                 Cancel
               </div> :
               <div className=''>
