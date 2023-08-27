@@ -1,71 +1,141 @@
-.SignIn-wrapper {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #1e4d91;
-  }
-.signin-container {
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e4d91;
+}
+
+.login-container {
   /* border: 2px solid green; */
-    width: 30%;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 1rem;
-    background-color: #fff;
-  }
-  .SignIn-wrapper .signin-container h2 {
-    margin-left: 5rem;
-  }
-  .SignIn-wrapper .signin-container form {
-    max-width: 300px;
-  }
-  .SignIn-wrapper .signin-container form .div1 {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-  .SignIn-wrapper .signin-container form .div2 {
-    display: flex;
-    gap: 0.3rem;
-  }
-  .SignIn-wrapper .signin-container form input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: 1px solid #ccc;
-    border-radius: 0.1875rem;
-    box-sizing: border-box;
-    display: block;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-    padding: 0.275rem;
-    width: 100%;
-  }
-  .SignIn-wrapper .signin-container form input[type=checkbox] {
-    -webkit-appearance: checkbox;
-    -moz-appearance: checkbox;
-    appearance: checkbox;
-    display: inline-block;
-    width: auto;
-  }
-  .SignIn-wrapper .signin-container form input[type=password] {
-    margin-bottom: 0.5rem;
-  }
-  .SignIn-wrapper .signin-container form input[type=submit] {
-    background-color: #015294;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-  .SignIn-wrapper .signin-container form label {
-    color: #666;
-    font-size: 0.875rem;
-  }
-  .SignIn-wrapper .signin-container p span {
-    color: #325c9a;
-  }
-  .SignIn-wrapper .signin-container p span:hover {
-    cursor: pointer;
-  }
+  width: 30%;
+  height: 70%;
+  display: flex;
+  padding: 2rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+.login-container2 {
+  /* border: 2px solid green; */
+  width: 30%;
+  height: 80%;
+  display: flex;
+  padding: 2rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+
+.login_head {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  font-size: 1.8rem;
+}
+
+.login_form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  /* border: 2px solid green; */
+  width: 100%;
+  height: 25rem;
+}
+
+.login_form_in {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login_label {
+  width: 100%;
+  height: 2rem;
+  font-weight: 540;
+  margin-top: 1rem;
+  /* border: 2px solid red; */
+}
+
+.login_input1 {
+  width: 100%;
+  height: 2.5rem;
+  padding: 1rem;
+  font-size: .99rem;
+  border: .1rem solid #dbdbdb;
+  border-radius: .4rem;
+}
+
+.login_input2 {
+  width: 100%;
+  height: 2.5rem;
+  padding: 1rem 1rem;
+  font-size: 1.8rem;
+  border: .1rem solid #dbdbdb;
+  border-radius: .4rem;
+  /* color: rgba(254, 254, 254, 255); */
+  /* text-align: center; */
+}
+::-webkit-input-placeholder {
+  text-align:justify;
+}
+
+
+.login_form_rem {
+  /* border: 2px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.login_form_rem_box {
+  /* border: 2px solid red; */
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 1rem 1rem 1rem 0;
+  cursor: pointer;
+}
+
+.login_form_rem_label {
+  /* color: #878c90; */
+}
+
+.login_form_login {
+  width: 100%;
+  height: 3rem;
+  background-color: #1e4d91;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: .2rem;
+  cursor: pointer;
+}
+
+.login_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+}
+
+.login_bottom_sign {
+  /* border: 2px solid green; */
+  margin: 0 0 0 .6rem;
+  color: #255294;
+  cursor: pointer;
+}

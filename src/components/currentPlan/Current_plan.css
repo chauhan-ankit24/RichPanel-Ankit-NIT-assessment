@@ -84,6 +84,7 @@
     align-items: center;
     color: #1F4D91;
     font-weight: 550;
+    cursor: pointer;
 }
 
 .CurretnContainer_item2 {

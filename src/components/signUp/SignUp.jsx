@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
-import "./SignUp.css";
+import "../login/Login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -46,13 +46,17 @@ const SignUp = () => {
     };
 
     return (
-        <div className="SignUp-wrapper">
-            <div className="signup-container">
-                <h2>Create Account</h2>
-                <form onSubmit={handleSignUp}>
-                    <div className="div1">
-                        <label htmlFor="text">Name</label>
+        <div className="login-wrapper">
+            <div className="login-container2">
+                <div className="login_head">
+                    Create Account
+                </div>
+                <form className="login_form" onSubmit={handleSignUp}>
+                    <div className="login_form_in">
+                        <label className="login_label" htmlFor="text">Name</label>
                         <input
+                            placeholder="Manoj Kumar"
+                            className="login_input1"
                             type="text"
                             id="text"
                             value={name}
@@ -60,9 +64,11 @@ const SignUp = () => {
                         />
                     </div>
 
-                    <div className="div1">
-                        <label htmlFor="email">Email</label>
+                    <div className="login_form_in">
+                        <label className="login_label" htmlFor="email">Email</label>
                         <input
+                            placeholder="manoj@richpanel.com"
+                            className="login_input1"
                             type="email"
                             id="email"
                             value={email}
@@ -70,9 +76,11 @@ const SignUp = () => {
                         />
                     </div>
 
-                    <div>
-                        <label htmlFor="pass">Password</label>
+                    <div className="login_form_in">
+                        <label className="login_label" htmlFor="pass">Password</label>
                         <input
+                            placeholder=".............."
+                            className="login_input2"
                             type="password"
                             id="pass"
                             value={password}
@@ -80,21 +88,22 @@ const SignUp = () => {
                         />
                     </div>
 
-                    <div className="div2">
+                    <div className="login_form_rem">
                         <input
+                            className="login_form_rem_box"
                             type="checkbox"
                             checked={rememberMe}
                             onChange={(e) => setRememberMe(e.target.checked)}
                         />
-                        <label htmlFor="rememberMe">Remember me</label>
+                        <label className="login_form_rem_label" htmlFor="rememberMe">Remember me</label>
                     </div>
 
-                    <input type="submit" value="Sign Up" id="signUpButton" />
+                    <input className="login_form_login" type="submit" value="Sign Up" id="signUpButton" />
                 </form>
-                <p>
+                <div className="login_bottom">
                     Already have an account?{" "}
-                    <span onClick={() => navigate("/Login")}>Login</span>
-                </p>
+                    <div className="login_bottom_sign" onClick={() => navigate("/Login")}>Login</div>
+                </div>
             </div>
         </div>
     );

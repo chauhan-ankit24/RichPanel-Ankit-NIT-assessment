@@ -158,6 +158,7 @@
     color: white;
     border-radius: .3rem;
     /* margin-top: 1rem; */
+    cursor: pointer;
 }
 
 .toggle-container {
@@ -168,9 +169,11 @@
     height: 45%;
     border-radius: 6rem;
     background-color: #1e4c90;
+    padding: 1rem;
 }
 
 .toggle-button {
+    width: 6vw;
     padding: 10px 15px;
     border: none;
     background-color: white;
@@ -180,6 +183,7 @@
 }
 
 .toggle-button.active {
+    width: 6vw;
     background-color: #1e4c90;
     font-weight: 600;
     color: white;

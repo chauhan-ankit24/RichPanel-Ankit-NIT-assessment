@@ -49,40 +49,44 @@ const Login = () => {
 
     return (
         <>
-            <div className="SignIn-wrapper">
-                <div className="signin-container">
-                    <h2>Login to your account</h2>
-                    <form>
-                        <div>
-                            <label htmlFor="email">Email</label>
-                            <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <div className="login-wrapper">
+                <div className="login-container">
+                    <div className="login_head">
+                        Login to your account
+                    </div>
+                    <form className="login_form">
+                        <div className="login_form_in">
+                            <label htmlFor="email" className="login_label">Email</label>
+                            <input type="email" id="email" className="login_input1" placeholder="manoj@richpanel.com" value={email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
 
-                        <div>
-                            <label htmlFor="pass">Password</label>
-                            <input type="password" id="pass" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <div className="login_form_in">
+                            <label htmlFor="pass" className="login_label">Password</label>
+                            <input type="password" placeholder=".............." id="pass" className="login_input2" value={password} onChange={(e) => setPassword(e.target.value)} />
                         </div>
 
-                        <div className="div2">
+                        <div className="login_form_rem">
                             <input
+                                className="login_form_rem_box"
                                 type="checkbox"
                                 checked={rememberMe}
                                 onChange={(e) => setRememberMe(e.target.checked)}
                             />
-                            <label htmlFor="rememberMe">Remember me</label>
+                            <label className="login_form_rem_label" htmlFor="rememberMe">Remember Me</label>
                         </div>
 
                         <input
+                            className="login_form_login"
                             type="submit"
                             value="Login"
                             id="signUpButton"
                             onClick={(e) => handleLogin(e)}
                         />
                     </form>
-                    <p>
-                        New to MyApp?{" "}
-                        <span onClick={() => navigate("/")}>Sign Up</span>
-                    </p>
+                    <div className="login_bottom">
+                        New to MyApp? {" "}
+                        <div className="login_bottom_sign" onClick={() => navigate("/")}>Sign Up</div>
+                    </div>
                 </div>
             </div>
         </>
